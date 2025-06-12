@@ -1,0 +1,28 @@
+/* src/styles/Navbar.css */
+.navbar {
+  background-color: white;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1d3557;
+}
+
+.search-bar {
+  width: 40%;
+  padding: 0.4rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.nav-icons span {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}

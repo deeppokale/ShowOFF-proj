@@ -1,7 +1,14 @@
+/* Reset & basic app container */
 .App {
-  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* Optional: If you still use .App-logo somewhere */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,21 +20,18 @@
   }
 }
 
+/* Remove if you're not using it anymore */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: none;
 }
 
+/* Link styling - customize or remove if unnecessary */
 .App-link {
-  color: #61dafb;
+  color: #007aff;
+  text-decoration: none;
 }
 
+/* Optional animation (used only if .App-logo is shown) */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
