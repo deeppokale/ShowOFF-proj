@@ -1,0 +1,149 @@
+/* src/styles/ProfilePage.css */
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px 80px;
+  background: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  position: relative; /* For absolute toggle button */
+}
+
+/* Header top: profile pic + gear icon */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+
+.settings-icon {
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.username {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.bio {
+  font-size: 14px;
+  margin: 5px 0 10px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.edit-profile-link {
+  display: inline-block;
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 6px 14px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.profile-toggle-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 10px 0;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+  padding: 10px 0;
+}
+
+.toggle-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #888;
+}
+
+.toggle-icon.active {
+  color: var(--text-color);
+}
+
+.profile-content {
+  width: 100%;
+  max-width: 600px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.post-thumbnail {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.reels-placeholder {
+  text-align: center;
+  padding: 40px 0;
+  color: #888;
+}
+
+/* Theme Toggle Button: absolute top-right */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: #1e90ff;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.theme-toggle:hover {
+  background: #1c86ee;
+}
+
+/* Theme Variables */
+:root {
+  --background-color: #000;
+  --text-color: #fff;
+}
+
+[data-theme="light"] {
+  --background-color: #fff;
+  --text-color: #000;
+}

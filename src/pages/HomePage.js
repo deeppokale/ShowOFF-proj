@@ -1,21 +1,20 @@
 // src/pages/HomePage.js
+
 import React, { useState, useEffect } from 'react';
 import Reels from '../components/Reels';
 import Brands from '../components/Brands';
 import Offers from '../components/Offers';
 import Events from '../components/Events';
 import BottomNavBar from '../components/BottomNavBar';
-
 import '../styles/HomePage.css';
 
-const HomePage = () => {
+const HomePage = ({ darkMode, toggleDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('reels');
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    document.body.classList.toggle('dark', isDarkMode);
-  }, [isDarkMode]);
+    document.body.classList.toggle('dark', darkMode);
+  }, [darkMode]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -28,16 +27,13 @@ const HomePage = () => {
 
   const categoryChips = ['Nike', 'Adidas', 'Zara', 'Offers', 'Events', 'Reels'];
 
-  
-
   return (
     <div className="home-container">
-
       {/* Top Bar */}
       <div className="top-bar">
         <div className="hamburger-icon" onClick={toggleMenu}>☰</div>
         <h1 className="logo-text">ShowOFF</h1>
-        <div className="dark-toggle" onClick={() => setIsDarkMode(!isDarkMode)}>🌓</div>
+        <div className="dark-toggle" onClick={toggleDarkMode}>🌓</div>
       </div>
 
       {/* Dropdown Menu */}

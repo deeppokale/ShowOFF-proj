@@ -1,0 +1,57 @@
+/* src/styles/SettingsPage.css */
+
+.settings-page {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.settings-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.settings-section {
+  margin-bottom: 30px;
+}
+
+.settings-section h3 {
+  margin-bottom: 10px;
+}
+
+.settings-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.settings-section ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.theme-toggle {
+  padding: 10px 20px;
+  border: none;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout-button {
+  padding: 10px 20px;
+  background: crimson;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
