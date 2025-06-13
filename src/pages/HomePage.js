@@ -5,6 +5,7 @@ import Brands from '../components/Brands';
 import Offers from '../components/Offers';
 import Events from '../components/Events';
 import BottomNavBar from '../components/BottomNavBar';
+
 import '../styles/HomePage.css';
 
 const HomePage = () => {
@@ -26,6 +27,8 @@ const HomePage = () => {
   };
 
   const categoryChips = ['Nike', 'Adidas', 'Zara', 'Offers', 'Events', 'Reels'];
+
+  
 
   return (
     <div className="home-container">
