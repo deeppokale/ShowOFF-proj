@@ -8,13 +8,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
-  background-color: #ffffff;
+  padding: 1px 20px;
+  background: linear-gradient(135deg, #e7dbdb, #a7c3e4, #d4a7e8f2);
   color: #000000;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
 }
 
 body.dark .top-bar {
-  background-color: #1f1f1f;
+  background: linear-gradient(135deg, #2b2424, #ddd6e1);
   color: #ffffff;
 }
 
@@ -101,13 +102,14 @@ body.dark .chip {
 .home-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background-color: #ffffff;
+  min-height: 200vh;
+  background: linear-gradient(135deg, #eee2ea, #f2abab);
   color: #000000;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark .home-container {
-  background-color: #000000;
+ background: linear-gradient(135deg, #160f0f, #413946);
   color: #ffffff;
 }
+

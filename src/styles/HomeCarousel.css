@@ -1,0 +1,54 @@
+.carousel-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  
+}
+
+.carousel-slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  height: 350px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(150deg, #eee2ea, #f2abab);
+  text-align: top;
+  padding-bottom: 10px;
+}
+
+.carousel-caption h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.explore-link {
+  color: #999;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+body.dark .carousel-caption{
+ 
+ background: linear-gradient(135deg, #160f0f, #413946);
+  color: #ffffff;
+}

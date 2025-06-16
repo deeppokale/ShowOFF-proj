@@ -1,15 +1,27 @@
 // src/components/Brands.js
 import React from 'react';
+import HomeCarousel from './HomeCarousel';
+import '../styles/Brands.css'; // <-- Make sure this is imported
 
 const Brands = () => {
   return (
-    <div className="p-4 bg-white dark:bg-gray-900 text-black dark:text-white min-h-[60vh]">
-      <h2 className="text-2xl font-bold mb-4">Top Brands</h2>
-      <div className="grid grid-cols-2 gap-4">
-        <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">Nike</div>
-        <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">Adidas</div>
-        <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">Zara</div>
-        <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">H&M</div>
+    <div className="brands-container">
+      <HomeCarousel />
+
+      <h2 className="brands-title">Top Brands</h2>
+      <div className="brand-logos">
+        <a href="/nike" className="brand-link">
+          <img src="/images/nike-logo.png" alt="Nike" className="brand-image" />
+        </a>
+        <a href="/zara" className="brand-link">
+          <img src="/images/adidas-logo.png" alt="Adidas" className="brand-image" />
+        </a>
+        <a href="/nike" className="brand-link">
+          <img src="/images/zara-logo.png" alt="Zara" className="brand-image" />
+        </a>
+        <a href="/nike" className="brand-link">
+          <img src="/images/hm-logo.png" alt="H&M" className="brand-image" />
+        </a>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 // src/pages/HomePage.js
 
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // 👈 Import navigation
 import Reels from '../components/Reels';
 import Brands from '../components/Brands';
 import Offers from '../components/Offers';
@@ -11,6 +12,7 @@ import '../styles/HomePage.css';
 const HomePage = ({ darkMode, toggleDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('reels');
+  const navigate = useNavigate(); // 👈 Initialize navigation
 
   useEffect(() => {
     document.body.classList.toggle('dark', darkMode);
@@ -21,11 +23,23 @@ const HomePage = ({ darkMode, toggleDarkMode }) => {
   };
 
   const handleSectionClick = (section) => {
-    setActiveSection(section);
+    if (section === 'offers') {
+      navigate('/offers'); // 👈 Navigate to new OffersPage
+    } else {
+      setActiveSection(section);
+    }
     setMenuOpen(false);
   };
 
   const categoryChips = ['Nike', 'Adidas', 'Zara', 'Offers', 'Events', 'Reels'];
+
+  const handleChipClick = (chip) => {
+    if (chip.toLowerCase() === 'offers') {
+      navigate('/offers');
+    } else {
+      setActiveSection(chip.toLowerCase());
+    }
+  };
 
   return (
     <div className="home-container">
@@ -55,7 +69,9 @@ const HomePage = ({ darkMode, toggleDarkMode }) => {
         />
         <div className="chips-scroll">
           {categoryChips.map((item, index) => (
-            <div className="chip" key={index}>{item}</div>
+            <div className="chip" key={index} onClick={() => handleChipClick(item)}>
+              {item}
+            </div>
           ))}
         </div>
       </div>

@@ -3,12 +3,20 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ecb00c, #ed2020, #940ecdf2); /* red to white */
-  height: 100vh;
+  background: linear-gradient(135deg, #ecb00c, #ed2020, #940ecdf2);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 
 
 .login-container {
@@ -20,7 +28,7 @@ body {
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 8px 32px rgba(188, 4, 4, 0.25);
-  color: #202020;
+  color: #181717;
   animation: slideUp 0.5s ease-in-out;
 }
 
@@ -48,12 +56,13 @@ body {
   margin: 10px 0;
   border-radius: 8px;
   border: none;
-  outline: none;
+  outline: 1.5px solid #ccc;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);;
   font-size: 1rem;
 }
 
 .login-form input::placeholder {
-  color: #bbb;
+  color: #b3aeae;
 }
 
 .login-form button {
@@ -70,7 +79,7 @@ body {
 }
 
 .login-form button:hover {
-  background: #f3ececf2;
+  background: linear-gradient(135deg, #e31919, #931ad0);
 }
 
 .google-btn {
@@ -86,7 +95,7 @@ body {
   text-align: center;
   margin: 1rem 0;
   font-size: 0.9rem;
-  color: #ccc;
+  color: #a4a2a2;
   position: relative;
 }
 
@@ -117,3 +126,5 @@ body {
   margin-bottom: 10px;
   text-align: center;
 }
+
+

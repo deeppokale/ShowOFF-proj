@@ -1,0 +1,43 @@
+.brands-container {
+  padding: 20px;
+  background: linear-gradient(135deg, #eee2ea, #f2abab);
+  color: #000;
+  min-height: 60vh;
+}
+
+.brands-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 30px 0 20px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.brand-logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.brand-link {
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.brand-link:hover {
+  transform: scale(1.05);
+}
+
+.brand-image {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  background-color: transparent; /* ensures nothing added */
+  border: none;
+  box-shadow: 0 ;
+}
+

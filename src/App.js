@@ -2,6 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { CartProvider } from './context/CartContext';
+import OffersPage from './pages/OffersPage';
 
 // Pages
 import LoginPage from './pages/LoginPage';
@@ -11,6 +15,9 @@ import HomePage from './pages/HomePage';
 import ProfilePage from './pages/ProfilePage';
 import EditProfilePage from './pages/EditProfilePage';
 import SettingsPage from './pages/SettingsPage';
+import NikeProducts from './pages/NikeProducts'; // 👈 New page
+import ProductDetail from './components/ProductDetail';
+import RestaurantDetail from './pages/RestaurantDetail';
 
 // Components
 import BottomNavBar from './components/BottomNavBar';
@@ -43,19 +50,14 @@ function App() {
 
   return (
     <DarkModeProvider>
+     <CartProvider>
       <Router>
         <div style={{ paddingBottom: '60px' }}>
           <Routes>
-            {/* Login Route */}
             <Route path="/" element={<LoginPage />} />
-
-            {/* Signup Route */}
             <Route path="/signup" element={<SignupPage />} />
-
-            {/* Cart Route */}
             <Route path="/cart" element={<CartPage />} />
 
-            {/* Home Page */}
             <Route
               path="/homepage"
               element={
@@ -65,8 +67,6 @@ function App() {
                 </>
               }
             />
-
-            {/* Profile Page */}
             <Route
               path="/profile"
               element={
@@ -80,8 +80,6 @@ function App() {
                 </>
               }
             />
-
-            {/* Edit Profile Page */}
             <Route
               path="/edit-profile"
               element={
@@ -96,8 +94,6 @@ function App() {
                 </>
               }
             />
-
-            {/* Settings Page */}
             <Route
               path="/settings"
               element={
@@ -111,11 +107,55 @@ function App() {
               }
             />
 
-            {/* Fallback for undefined paths -> redirect to HomePage */}
+            {/* 👇 Nike Products with BottomNavBar */}
+            <Route
+              path="/nike"
+              element={
+                <>
+                  <NikeProducts />
+                  <BottomNavBar />
+                </>
+              }
+            />
+
+            <Route
+  path="/nike"
+  element={
+    <>
+      <NikeProducts />
+      <BottomNavBar />
+    </>
+  }
+/>
+
+<Route
+  path="/product/:id"
+  element={
+    <>
+      <ProductDetail />
+      <BottomNavBar />
+    </>
+  }
+/> 
+    <Route path="/offers" element={<OffersPage />} />
+
+<Route
+  path="/restaurant/:name"
+  element={
+    <>
+      <RestaurantDetail darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <BottomNavBar />
+    </>
+  }
+/>
+
+            {/* Fallback */}
             <Route path="*" element={<Navigate to="/homepage" />} />
           </Routes>
         </div>
       </Router>
+
+    </CartProvider>  
     </DarkModeProvider>
   );
 }
